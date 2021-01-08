@@ -37,7 +37,7 @@ const SignIn = (props) => {
       setPageError(errors);
     }
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [isAuthenticated, errors, props.history, props.location]);
 
   const submitHandler = async (e) => {
