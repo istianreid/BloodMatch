@@ -3,10 +3,12 @@ import axios from "axios"
 
 // http://localhost:8080/api/v1
 // ayn https://bloodmatch.herokuapp.com/api/v1
-// istian https://bloodmatch-ef5h4xoc3.vercel.app
 
-const imgProfileURL = 'https://bloodmatch-ef5h4xoc3.vercel.app/uploads/profile/'
-const imgRequesPostURL = 'https://bloodmatch-ef5h4xoc3.vercel.app/uploads/requesPost/'
+// istian backEnd https://bloodmatch.herokuapp.com
+// istian frontEnd https://bloodmatch-ef5h4xoc3.vercel.app
+
+const imgProfileURL = 'https://bloodmatch.herokuapp.com/uploads/profile/'
+const imgRequesPostURL = 'https://bloodmatch.herokuapp.com/uploads/requesPost/'
 const baseURL = 'https://bloodmatch.herokuapp.com/api/v1'
 
 let headers = {};
