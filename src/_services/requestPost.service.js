@@ -1,4 +1,4 @@
-import instance from '../_helpers/axios';
+import {instance} from '../_helpers/axios';
 
 
 const addRequestPost = async (details) => {

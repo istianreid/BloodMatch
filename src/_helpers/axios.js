@@ -3,9 +3,12 @@ import axios from "axios"
 
 // http://localhost:8080/api/v1
 // ayn https://bloodmatch.herokuapp.com/api/v1
-// istian https://blood-match-c8158kpgr.vercel.app
+// istian https://bloodmatch-ef5h4xoc3.vercel.app
 
-const baseURL = 'http://localhost:8080/api/v1'
+const imgProfileURL = 'https://bloodmatch-ef5h4xoc3.vercel.app/uploads/profile/'
+const imgRequesPostURL = 'https://bloodmatch-ef5h4xoc3.vercel.app/uploads/requesPost/'
+const baseURL = 'https://bloodmatch.herokuapp.com/api/v1'
+
 let headers = {};
 
 if (localStorage.jwtToken) {
@@ -17,5 +20,8 @@ const instance = axios.create({
     headers,
 })
 
+const imgProfile = imgProfileURL
+const imgRequestpost = imgRequesPostURL
 
-export default instance 
+
+export {instance , imgProfile , imgRequestpost }

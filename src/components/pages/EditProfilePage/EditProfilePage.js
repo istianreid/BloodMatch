@@ -7,7 +7,7 @@ import {profileActions , userActions} from'../../../_actions'
 import jwt_decode from "jwt-decode";
 import {profileConstants} from '../../../_constants'
 import { useDispatch, useSelector} from "react-redux";
-import instance from '../../../_helpers/axios'
+import {instance} from '../../../_helpers/axios'
 import { store } from 'react-notifications-component'
 import Loading from '../../layout/loader/Loading'
 

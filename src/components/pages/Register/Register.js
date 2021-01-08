@@ -24,8 +24,6 @@ const Register = (props) => {
 
   useEffect(() => {
 
-    
-
     if (success) {
       props.history.push("/signIn");
 
@@ -40,12 +38,12 @@ const Register = (props) => {
           duration: 8000
         }
       })
+      
     }
     if (errors) {
       setPageError(errors);
     }
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [success, props.history, errors, props.location]);
   
 

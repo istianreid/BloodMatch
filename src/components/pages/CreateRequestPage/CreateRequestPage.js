@@ -7,7 +7,7 @@ import "./CreateRequestPage.css";
 import { useDispatch, useSelector } from "react-redux";
 import { requestPostActions } from "../../../_actions";
 import {requestPostConstants} from '../../../_constants'
-import instance from '../../../_helpers/axios'
+import {instance} from '../../../_helpers/axios'
 import axios from "axios"
 
 const CreateRequestPage = (props) => {
@@ -50,8 +50,7 @@ const CreateRequestPage = (props) => {
     if (errors) {
       setPageError(errors);
     }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [success, props.history, errors, props.location]);
 
   

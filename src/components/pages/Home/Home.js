@@ -10,9 +10,10 @@ import { useDispatch, useSelector} from "react-redux";
 
 function Home() {
 
+    const profileData = useSelector((state) => state.profile);
     const auth = useSelector((state) => state.auth);
-    const { isAuthenticated} = auth;
-    const dispatch = useDispatch();
+    const {user, errors , isValid} = auth;
+    const {success, profile , valid } = profileData;
     
     return (
 

@@ -1,4 +1,4 @@
-import instance from '../_helpers/axios'
+import {instance} from '../_helpers/axios'
 import jwt_decode from "jwt-decode";
 
 

@@ -25,20 +25,16 @@ const SignIn = (props) => {
     const value = queryString.parse(props.location.search);
     const activate = value.activate;
 
-    // if (activate === "1") {
-    //   setShowActivate(true);
-    // }
-
     if (isAuthenticated) {
-      props.history.push("/SetupProfile");
+      props.history.push("/");
     }
 
     if (errors) {
       setPageError(errors);
     }
 
-
   }, [isAuthenticated, errors, props.history, props.location]);
+
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -46,6 +42,7 @@ const SignIn = (props) => {
     dispatch(userActions.loginAction(details));
   };
 
+  
   return (
     <>
       <Container className="SignInPage">

@@ -69,8 +69,8 @@
 
 .profileInfo .profilePic {
   border-radius: 50%;
-  height: 114px;
-  width: 114px;
+  height: 200px;
+  width: 200px;
 
   margin-bottom: 24px;
 }
@@ -82,7 +82,7 @@
   line-height: 28px;
   color: #131415;
 
-  margin-bottom: 58px;
+  margin-bottom: 25px;
 }
 
 .profileInfo h4 {

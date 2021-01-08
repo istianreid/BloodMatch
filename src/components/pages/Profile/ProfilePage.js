@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ProfilePage.css";
 import axios from "axios";
+import {imgProfile} from "../../../_helpers/axios.js"
 import {
   Modal,
   Button,
@@ -48,15 +49,9 @@ const ProfilePage = () => {
 
   useEffect(() => {
 
-    dispatch(userActions.findOneUserAction())
-
-  }, []);
-
-
-  useEffect(() => {
-
 
     dispatch(profileActions.GetprofileAction())
+    dispatch(userActions.findOneUserAction())
 
     const fetchData = async () => {
 
@@ -190,7 +185,7 @@ const ProfilePage = () => {
               <div className='profileInfoBody d-flex'>
                 <img
                   className='profilePic'
-                  src = {profile.photo}
+                  src = {imgProfile+profile.photo}
                   alt='profilepic'
                 />
                 <h3>{user.firstName} {user.lastName}</h3>
