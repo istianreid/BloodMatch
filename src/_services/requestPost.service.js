@@ -26,6 +26,7 @@ const addRequestPost = async (details) => {
 
 
 //need to add Request id 
+// not needed
 
 const updateRequestPost = async () => {
   const result = instance
@@ -61,7 +62,8 @@ const findAllRequestPost = async () => {
 
      if (res.status === 200) {
         return {
-          type: "success" 
+          type: "success" ,
+          posts: res.data.data
         } 
       } 
     })

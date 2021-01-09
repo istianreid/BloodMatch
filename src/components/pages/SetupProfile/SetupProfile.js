@@ -54,7 +54,7 @@ const SetupProfile = (props) => {
             </p>
 
             {/* <button className='customButton'>GET STARTED</button> */}
-            <Link to = {`/EditprofilePage/${profile._id}`}>
+            <Link to = {`/profilePage`}>
                 <Button className='customButton' > EDIT PROFILE </Button>
             </Link>
           </div>

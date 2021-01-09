@@ -25,7 +25,8 @@ import 'react-notifications-component/dist/theme.css'
 import Activation from "./components/pages/Activation/Activation";
 import jwt_decode from "jwt-decode";
 import { userConstants } from "./_constants";
-import {userActions , profileActions} from './_actions'
+
+import {userActions , profileActions , requestPostActions} from './_actions'
 import { useDispatch, useSelector} from "react-redux";
 
 import Loading from './components/layout/loader/Loading';
@@ -65,6 +66,7 @@ const App = () => {
 
         // dispatch(userActions.findOneUserAction())
         // dispatch(profileActions.GetprofileAction())
+        // dispatch(requestPostActions.allRequestPostAction())
 
       }
       

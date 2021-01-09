@@ -3,7 +3,7 @@ import { useDropzone } from "react-dropzone";
 import { Form, Col, InputGroup , Button } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
-import {profileActions , userActions} from'../../../_actions'
+import {profileActions , userActions , requestPostActions} from'../../../_actions'
 import jwt_decode from "jwt-decode";
 import {profileConstants} from '../../../_constants'
 import { useDispatch, useSelector} from "react-redux";
@@ -53,6 +53,7 @@ const EditProfilePage = (props) => {
 
     if (valid || isValid === true) {
       props.history.push("/")
+      
     }
 
   }, [valid, isValid ,  props.history, props.location])

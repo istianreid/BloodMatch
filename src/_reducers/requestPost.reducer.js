@@ -3,17 +3,29 @@ import { requestPostConstants } from "../_constants";
 const initialState = {
 
   mypost: {},
-  posts:{},
+  posts: {},
   success: false,
   loading: false,
-
+  
   errors: {},
 };
+
 
 export const post = (state = initialState, action) => {
 
   switch (action.type) {
 
+    case requestPostConstants.REQUESTPOST_LIST_SUCCESS:
+      return {
+        ...state,
+        posts: action.posts,
+      };
+    case requestPostConstants.REQUESTPOST_LIST_FAIL:
+      return {
+        ...state,
+        errors: action.errors,
+      };
+    /* falls through */
     case requestPostConstants.REQUESTPOST_CREATE_SUCCESS:
       return {
         ...state,
@@ -50,25 +62,12 @@ export const post = (state = initialState, action) => {
         errors: action.errors,
       };
     /* falls through */
-    case requestPostConstants.REQUESTPOST_LIST_SUCCESS:
-      return {
-        ...state,
-        posts: action.posts,
-        success:true,
-        loading: true,
-      };
-    case requestPostConstants.REQUESTPOST_LIST_FAIL:
-      return {
-        ...state,
-        errors: action.errors,
-      };
-    /* falls through */
+
     case requestPostConstants.REQUESTPOST_DETAILS_SUCCESS:
       return {
         ...state,
         myposts: action.post,
         success:true,
-        loading: true,
       };
     case requestPostConstants.REQUESTPOST_DETAILS_FAIL:
     /* falls through */
@@ -84,14 +83,10 @@ export const post = (state = initialState, action) => {
         errors: action.errors,
       }
       /* falls through */
-
     default: {
-
         return {
           ...state
-  
         }
-      }
-  
-  }
+      }  
+    }
 };

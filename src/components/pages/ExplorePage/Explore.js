@@ -1,39 +1,51 @@
-import React from 'react';
+import React , {useEffect , useState} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import "./Explore.css";
 
 import data from "../../../data.json";
-import Card from "../../layout/card/Index";
+import Stories from "../../layout/card/Index";
 import Filter from '../../layout/filter/Index';
 
-class Explore extends React.Component {
-    constructor(){
-        super();
-        this.state = {
-            stories: data.stories,
-            status: "",
-            hospital: "",
-            location: "",
-        };
-    }
+import {userActions , profileActions , requestPostActions } from '../../../_actions'
+import { useDispatch, useSelector} from "react-redux";
 
-    storiesStatus = (event) => {
+const Explore = () =>{
+
+
+
+    const dispatch = useDispatch();
+    const auth = useSelector((state) => state.auth);
+    const postData = useSelector((state) => state.post);
+    const {isAuthenticated} = auth;
+    const {posts} = postData
+
+    console.log(posts)
+
+    useEffect(() => {
+
+        dispatch(requestPostActions.allRequestPostAction())
+
+    }, [isAuthenticated]);
+ 
+
+
+
+    const storiesStatus = (event) => {
         console.log(event.target.value)
         
     }
 
-    storiesHospital = (event) => {
+    const storiesHospital = (event) => {
         console.log(event.target.value)
         
     }
 
-    storiesLocation = (event) => {
+    const storiesLocation = (event) => {
         console.log(event.target.value)
         
     }
 
-    render() {
     return (
         <>
             <Container>
@@ -45,19 +57,24 @@ class Explore extends React.Component {
                 </Row>
 
                 <Row>
-                    <Filter status={this.state.status}
-                    hospital={this.state.hospital}
-                    location={this.state.location}
-                    storiesStatus={this.storiesStatus}
-                    storiesHospital={this.storiesHospital}
-                    storiesLocation={this.storiesLocation}
+                    <Filter resort={posts} 
+                    storiesStatus={posts.status}
+                    storiesHospital={posts.Hospital}
+                    storiesLocation={posts.location}
+
                 />
                 </Row>
 
                 <Row>
+                
                     <div className="content explorePage">
                         <div className="main storiesContainer">
-                            <Card className="storiesCard" stories={this.state.stories}></Card>  
+
+                        {posts.map(posts => (
+
+                         <Stories className="storiesCard" key={posts._id} posts={posts}/>
+
+                         ))}
                         </div>
                     </div>    
                 </Row>
@@ -65,7 +82,7 @@ class Explore extends React.Component {
             </Container>
         </>
     )
-    }
+    
 }
 
 export default Explore;

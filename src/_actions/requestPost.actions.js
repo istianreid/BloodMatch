@@ -33,7 +33,32 @@ const addRequestPostAction = (details) => {
   }
 }
 
+const allRequestPostAction = () => {
+  
+  return (dispatch) => {
+
+    RequestPostService.findAllRequestPost().then((res) => {
+
+      console.log(res)
+
+      if (res.type === "success") {
+        dispatch({
+          type: requestPostConstants.REQUESTPOST_LIST_SUCCESS,
+          posts : res.posts
+        });
+      }
+
+      else if (res.type === "error") {
+        dispatch({
+          type: requestPostConstants.REQUESTPOST_LIST_FAIL,
+        });
+      } 
+    })
+  }
+}
+
 
 export const requestPostActions = {
-  addRequestPostAction
+  addRequestPostAction ,
+  allRequestPostAction
 };
