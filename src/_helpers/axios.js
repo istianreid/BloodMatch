@@ -7,9 +7,9 @@ import axios from "axios"
 // istian backEnd https://bloodmatch.herokuapp.com
 // istian frontEnd https://bloodmatch-ef5h4xoc3.vercel.app
 
-const imgProfileURL = 'https://bloodmatch.herokuapp.com/uploads/profile/'
-const imgRequesPostURL = 'https://bloodmatch.herokuapp.com/uploads/'
-const baseURL = 'https://bloodmatch.herokuapp.com/api/v1'
+const imgProfileURL = 'http://localhost:8080/uploads/profile/'
+const imgRequesPostURL = 'http://localhost:8080/uploads/'
+const baseURL = 'http://localhost:8080/api/v1'
 
 let headers = {};
 

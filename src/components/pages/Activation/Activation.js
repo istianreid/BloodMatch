@@ -21,6 +21,7 @@ const Activation = (props) => {
       dispatch(userActions.activationAction(key))
 
       if (success === true) {
+
         props.history.push("/signIn");
 
         store.addNotification({
@@ -36,8 +37,6 @@ const Activation = (props) => {
         })
       }
 
-     
-  
   }, [success])
 
 

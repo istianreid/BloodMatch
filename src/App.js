@@ -91,7 +91,7 @@ const App = () => {
           <Header />
           <Switch className='switchLayout'>
 
-            <Route exact path='/' component={Home} />
+            <Route path='/' component={Home} />
             <Route path='/signIn' component={SignIn} />
             <Route path='/register' component={Register} />
             <Route path='/activate/:key' component={Activation} />

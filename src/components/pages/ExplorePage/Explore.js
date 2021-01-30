@@ -9,9 +9,14 @@ import Filter from '../../layout/filter/Index';
 
 import {userActions , profileActions , requestPostActions } from '../../../_actions'
 import { useDispatch, useSelector} from "react-redux";
+import Loading from '../../layout/loader/Loading';
+
 
 const Explore = () =>{
 
+
+    const [loading, setLoading] = useState();
+    const [done, setDone] = useState();
 
 
     const dispatch = useDispatch();
@@ -20,16 +25,22 @@ const Explore = () =>{
     const {isAuthenticated} = auth;
     const {posts} = postData
 
-    console.log(posts)
+    setTimeout(() => {
+        setLoading(true)
+        setTimeout(() => {
+          setDone(true)
+        }, 2500)
+      }, 3000);
+
 
     useEffect(() => {
 
-        dispatch(requestPostActions.allRequestPostAction())
-
-    }, [isAuthenticated]);
+        if (isAuthenticated === true ) {
+            dispatch(requestPostActions.allRequestPostAction())
+        }
+    
+    }, [isAuthenticated , posts]);
  
-
-
 
     const storiesStatus = (event) => {
         console.log(event.target.value)
@@ -45,6 +56,7 @@ const Explore = () =>{
         console.log(event.target.value)
         
     }
+
 
     return (
         <>
@@ -66,15 +78,19 @@ const Explore = () =>{
                 </Row>
 
                 <Row>
+
+
                 
                     <div className="content explorePage">
                         <div className="main storiesContainer">
 
-                        {posts.map(posts => (
+                        {!done ? (
+                     <Loading loading = {loading} />
 
-                         <Stories className="storiesCard" key={posts._id} posts={posts}/>
+                            ) : (posts.map(posts => (<Stories className="storiesCard" key={posts._id} posts={posts}/>))
 
-                         ))}
+                    )}
+
                         </div>
                     </div>    
                 </Row>
