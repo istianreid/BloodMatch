@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/BloodMatch/static/css/main.859ade32.chunk.css",
-    "main.js": "/BloodMatch/static/js/main.976de95e.chunk.js",
-    "main.js.map": "/BloodMatch/static/js/main.976de95e.chunk.js.map",
+    "main.js": "/BloodMatch/static/js/main.1487fdce.chunk.js",
+    "main.js.map": "/BloodMatch/static/js/main.1487fdce.chunk.js.map",
     "runtime-main.js": "/BloodMatch/static/js/runtime-main.61062283.js",
     "runtime-main.js.map": "/BloodMatch/static/js/runtime-main.61062283.js.map",
     "static/css/2.707d22d5.chunk.css": "/BloodMatch/static/css/2.707d22d5.chunk.css",
-    "static/js/2.ef7c7cc1.chunk.js": "/BloodMatch/static/js/2.ef7c7cc1.chunk.js",
-    "static/js/2.ef7c7cc1.chunk.js.map": "/BloodMatch/static/js/2.ef7c7cc1.chunk.js.map",
+    "static/js/2.5b3ef98a.chunk.js": "/BloodMatch/static/js/2.5b3ef98a.chunk.js",
+    "static/js/2.5b3ef98a.chunk.js.map": "/BloodMatch/static/js/2.5b3ef98a.chunk.js.map",
     "index.html": "/BloodMatch/index.html",
     "static/css/2.707d22d5.chunk.css.map": "/BloodMatch/static/css/2.707d22d5.chunk.css.map",
     "static/css/main.859ade32.chunk.css.map": "/BloodMatch/static/css/main.859ade32.chunk.css.map",
-    "static/js/2.ef7c7cc1.chunk.js.LICENSE.txt": "/BloodMatch/static/js/2.ef7c7cc1.chunk.js.LICENSE.txt",
+    "static/js/2.5b3ef98a.chunk.js.LICENSE.txt": "/BloodMatch/static/js/2.5b3ef98a.chunk.js.LICENSE.txt",
     "static/media/ArrowLeft.06b3f19b.svg": "/BloodMatch/static/media/ArrowLeft.06b3f19b.svg",
     "static/media/ArrowRight.a0480877.svg": "/BloodMatch/static/media/ArrowRight.a0480877.svg",
     "static/media/ArrowUpWhite.e9eb611d.svg": "/BloodMatch/static/media/ArrowUpWhite.e9eb611d.svg",
@@ -32,8 +32,8 @@
   "entrypoints": [
     "static/js/runtime-main.61062283.js",
     "static/css/2.707d22d5.chunk.css",
-    "static/js/2.ef7c7cc1.chunk.js",
+    "static/js/2.5b3ef98a.chunk.js",
     "static/css/main.859ade32.chunk.css",
-    "static/js/main.976de95e.chunk.js"
+    "static/js/main.1487fdce.chunk.js"
   ]
 }
